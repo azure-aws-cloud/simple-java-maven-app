@@ -12,6 +12,13 @@
         <developerConnection>scm:git:https://github.com/azure-aws-cloud/simple-java-maven-app.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+  <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/azure-aws-cloud/simple-java-maven-app</url>
+        </repository>
+    </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
