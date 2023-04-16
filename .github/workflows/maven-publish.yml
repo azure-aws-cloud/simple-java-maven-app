@@ -67,7 +67,7 @@ jobs:
         git config user.name "Babban Magan"
 
     - name: Release
-      run: mvn release:prepare  -B -Dusername=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 -Dpassword=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 -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
+      run: mvn release:prepare  -B -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
  
     - name: Build with Maven
       run: mvn clean install -DskipTests --file pom.xml
