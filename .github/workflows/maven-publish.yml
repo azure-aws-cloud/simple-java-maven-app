@@ -80,4 +80,4 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Docker build
       run: |
-        docker build -t simple-java-maven-app-docker
+        docker build -f Dockerfile -t simple-java-maven-app-docker
