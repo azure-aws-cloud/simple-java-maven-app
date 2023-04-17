@@ -32,6 +32,8 @@ jobs:
           echo " Github actor : ${{github.actor}}"
           echo " Github token : ${{github.token}}"
           echo "JAR_VERSION=${{github.event.inputs.developmentVersion}}" >> $GITHUB_ENV
+          echo $JAR_VERSION
+          echo ${{env.JAR_VERSION}}.jar
           docker --version
     
     - name: Set env for selected build tag or branch
