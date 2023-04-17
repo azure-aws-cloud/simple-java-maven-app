@@ -23,7 +23,7 @@ jobs:
       packages: write
 
     steps:
-    - name: Checkout code and echo Current working directory and inputs
+    - name: Echo inputs
       run: |
           echo "Current working directory is ${{ github.workspace }}"
           echo "Current working directory is $GITHUB_WORKSPACE"
@@ -31,6 +31,7 @@ jobs:
           echo "Snapshot version : ${{github.event.inputs.developmentVersion}}"
           echo " Github actor : ${{github.actor}}"
           echo " Github token : ${{github.token}}"
+          echo " Docker version ": docker version
     
     - name: Set env for selected build tag or branch
       run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
