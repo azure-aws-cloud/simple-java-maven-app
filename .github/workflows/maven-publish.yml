@@ -82,4 +82,4 @@ jobs:
       run: |
         pwd
         ls -lrt
-        docker build simple-java-maven-app-docker .
+        docker build -t simple-java-maven-app-docker .
