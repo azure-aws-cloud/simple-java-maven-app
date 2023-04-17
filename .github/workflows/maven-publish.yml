@@ -78,3 +78,6 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
+    - name: Docker build
+      run: |
+        docker build -t simple-java-maven-app-docker
