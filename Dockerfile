@@ -1,3 +1,3 @@
 FROM ubuntu
-ADD $GITHUB_WORKSPACE/target/my-app-1.0.6-SNAPSHOT.jar $HOME/
+ADD $GITHUB_WORKSPACE/target/my-app-${{ github.event.inputs.developmentVersion }}.jar $HOME
 
