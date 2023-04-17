@@ -31,6 +31,7 @@ jobs:
           echo "Snapshot version : ${{github.event.inputs.developmentVersion}}"
           echo " Github actor : ${{github.actor}}"
           echo " Github token : ${{github.token}}"
+          echo "JAR_VERSION=${{github.event.inputs.developmentVersion}}" >> $GITHUB_ENV
           docker --version
     
     - name: Set env for selected build tag or branch
