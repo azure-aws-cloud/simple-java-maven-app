@@ -1,3 +1,3 @@
 FROM ubuntu
-ADD $GITHUB_WORKSPACE/target/my-app-${{env.JAR_VERSION}}.jar $HOME
+ADD $GITHUB_WORKSPACE/target/simple-java-maven-app.jar $HOME
 
